@@ -1,0 +1,16 @@
+.navbar {
+    display: flex;
+    align-items: center ;
+    justify-content: space-between;
+    column-gap: 20px;
+    width: 100%;
+    padding: 20px;
+    min-height: var(--navbar-height);
+    background-color: var(--inventory-bg-color);
+}
+
+.navbar__link-wrapper {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}

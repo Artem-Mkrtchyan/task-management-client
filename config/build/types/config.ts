@@ -4,9 +4,10 @@ export interface IBuildPaths {
     entry: string,
     build: string,
     html: string,
+    src: string
 }
 
-export interface IBuildOption {
+export interface IBuildOptions {
     mode: TBuildMode,
     paths: IBuildPaths,
     isDev: boolean,
