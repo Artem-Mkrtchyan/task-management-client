@@ -1,0 +1,13 @@
+.sidebar {
+    height: calc(100vh - var(--navbar-height));
+    width: var(--sidebar-width);
+    background-color: var(--inventory-bg-color);
+}
+
+.sidebar--collabse {
+    width: var(--sidebar-width-collapse);
+}
+
+.sidebar__button {
+    color: var(--inventory-primary-color);
+}
