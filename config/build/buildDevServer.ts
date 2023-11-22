@@ -7,5 +7,5 @@ export function buildDevServer(option: IBuildOptions): ConfigurationDevServer {
         open: true,
         historyApiFallback: true,
         hot: true
-    }
+    };
 }

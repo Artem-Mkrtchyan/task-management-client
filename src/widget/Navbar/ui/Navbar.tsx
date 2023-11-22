@@ -8,7 +8,7 @@ import { useTranslation } from "react-i18next";
 
 interface INavbarProps {
     className?: string;
-};
+}
 
 export const Navbar: FC<INavbarProps> = (props) => {
     const { className } = props;
@@ -25,5 +25,5 @@ export const Navbar: FC<INavbarProps> = (props) => {
                 <ThemeSwitcher />
             </div>
         </div>
-    )
+    );
 };

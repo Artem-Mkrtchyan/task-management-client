@@ -12,7 +12,7 @@ interface IAppLinkProps extends LinkProps {
     className?: string;
     theme?: AppLinkTheme;
     children?: ReactNode;
-};
+}
 
 export const AppLink: FC<IAppLinkProps> = (props) => {
     const { className, children, to, theme = AppLinkTheme.PRIMATY } = props;
@@ -27,5 +27,5 @@ export const AppLink: FC<IAppLinkProps> = (props) => {
         >
             {children}
         </Link>
-    )
+    );
 };

@@ -1,9 +1,9 @@
-import { useTheme } from 'app/providers/ThemeProvider';
-import { AppRouter } from 'app/providers/router';
-import { Navbar } from 'widget/Navbar';
-import { Sidebar } from 'widget/Sidebar';
-import { Suspense } from 'react';
-import "./styles/index.scss"
+import { useTheme } from "app/providers/ThemeProvider";
+import { AppRouter } from "app/providers/router";
+import { Navbar } from "widget/Navbar";
+import { Sidebar } from "widget/Sidebar";
+import { Suspense } from "react";
+import "./styles/index.scss";
 
 export function App() {
     const { theme } = useTheme();

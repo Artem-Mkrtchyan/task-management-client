@@ -1,6 +1,6 @@
-import MiniCssExtractPlugin from "mini-css-extract-plugin"
-import { RuleSetRule } from "webpack"
-import { IBuildOptions } from "./types/config"
+import MiniCssExtractPlugin from "mini-css-extract-plugin";
+import { RuleSetRule } from "webpack";
+import { IBuildOptions } from "./types/config";
 
 export function buildLoaders(options: IBuildOptions): RuleSetRule[] {
     const { isDev } = options;
@@ -8,17 +8,17 @@ export function buildLoaders(options: IBuildOptions): RuleSetRule[] {
     const svgLoader = {
         test: /\.svg$/i,
         issuer: /\.[jt]sx?$/,
-        use: ['@svgr/webpack'],
+        use: ["@svgr/webpack"],
     };
 
     const fileLoader = {
         test: /\.(png|jpe?g|gif)$/i,
         use: [
-          {
-            loader: 'file-loader',
-          },
+            {
+                loader: "file-loader",
+            },
         ]
-    }
+    };
 
     const cssLoader = {
         test: /\.s[ac]ss$/i,
@@ -30,8 +30,8 @@ export function buildLoaders(options: IBuildOptions): RuleSetRule[] {
                     modules: {
                         auto: (path: string) => path.includes(".module."),
                         localIdentName: isDev
-                        ? "[path][name]__[local]--[hash:base64:5]"
-                        : "[hash:base64:8]",
+                            ? "[path][name]__[local]--[hash:base64:5]"
+                            : "[hash:base64:8]",
                     }
                 }
             },
@@ -41,14 +41,14 @@ export function buildLoaders(options: IBuildOptions): RuleSetRule[] {
 
     const typescriptLoader = {
         test: /\.tsx?$/,
-        use: 'ts-loader',
+        use: "ts-loader",
         exclude: /node_modules/,
-    }
+    };
 
     return [
         svgLoader,
         fileLoader,
         typescriptLoader,
         cssLoader
-    ]
+    ];
 }

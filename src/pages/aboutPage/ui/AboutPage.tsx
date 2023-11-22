@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
 const AboutPage: React.FC = () => {
-  return (
-    <div>
+    return (
+        <div>
         About page
-    </div>
-  )
-}
+        </div>
+    );
+};
 
 export default AboutPage;

@@ -5,15 +5,15 @@ import styles from "./Sidebar.module.scss";
 interface ISidebarProps {
     className?: string;
     children?: ReactNode
-};
+}
 
 export const Sidebar: FC<ISidebarProps> = (props) => {
     const { className, children } = props;
     const [collapse, setCollapse] = useState<boolean>(false);
 
     const onToggle = () => {
-        setCollapse((prevState) => !prevState)
-    }
+        setCollapse((prevState) => !prevState);
+    };
 
     return (
         <div className={classNames(styles.sidebar, {[styles["sidebar--collabse"]]: collapse}, [className])}>
@@ -22,5 +22,5 @@ export const Sidebar: FC<ISidebarProps> = (props) => {
                 {children}
             </div>
         </div>
-    )
+    );
 };

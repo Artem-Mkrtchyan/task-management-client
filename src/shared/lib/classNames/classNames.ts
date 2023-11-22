@@ -7,5 +7,5 @@ export function classNames(cls: string, mods?: TModes, additional?: string[]) {
         Object.entries(mods)
             .filter(([cls, value]) => Boolean(value))
             .map(([cls]) => cls)
-    ].join(" ")
+    ].join(" ");
 }
