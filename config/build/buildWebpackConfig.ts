@@ -6,7 +6,7 @@ import { IBuildOptions } from "./types/config";
 import { buildDevServer } from "./buildDevServer";
 
 export function buildWebpackConfig(options: IBuildOptions): Configuration {
-    const {mode, paths, isDev} = options
+    const {mode, paths, isDev} = options;
 
     return {
         mode,
