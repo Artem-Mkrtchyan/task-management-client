@@ -14,7 +14,7 @@ interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 export const Button: FC<IButtonProps> = (props) => {
     const { className, children, theme, ...otherProps } = props;
-
+    console.log("test");
     return (
         <button className={classNames(styles.button, {}, [className, styles[theme]])} {...otherProps} >
             {children}
