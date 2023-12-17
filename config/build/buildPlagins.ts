@@ -3,6 +3,7 @@ import { DefinePlugin, ProgressPlugin, WebpackPluginInstance, HotModuleReplaceme
 import { IBuildOptions } from "./types/config";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import ReactRefreshWebpackPlugin from "@pmmmwh/react-refresh-webpack-plugin";
+import { BundleAnalyzerPlugin } from "webpack-bundle-analyzer";
 
 export function buildPlagins(options: IBuildOptions): WebpackPluginInstance[] {
     const { paths, isDev } = options;
@@ -24,6 +25,7 @@ export function buildPlagins(options: IBuildOptions): WebpackPluginInstance[] {
     if (isDev) {
         plugins.push(new ReactRefreshWebpackPlugin());
         plugins.push(new HotModuleReplacementPlugin());
+        plugins.push(new BundleAnalyzerPlugin());
     }
 
     return plugins;

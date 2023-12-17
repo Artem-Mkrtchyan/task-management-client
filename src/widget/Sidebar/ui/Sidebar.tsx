@@ -16,8 +16,8 @@ export const Sidebar: FC<ISidebarProps> = (props) => {
     };
 
     return (
-        <div className={classNames(styles.sidebar, {[styles["sidebar--collabse"]]: collapse}, [className])}>
-            <button className={styles.sidebar__button} onClick={onToggle}>Toggle</button>
+        <div data-testid="sidebar" className={classNames(styles.sidebar, {[styles["sidebar--collabse"]]: collapse}, [className])}>
+            <button data-testid="sidebar-button" className={styles.sidebar__button} onClick={onToggle}>Toggle</button>
             <div>
                 {children}
             </div>
