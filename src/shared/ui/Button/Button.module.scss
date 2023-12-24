@@ -9,3 +9,9 @@
     background: none;
     outline: none;
 }
+
+.primary {
+    padding: 10px 15px;
+    color: var(--inventory-primary-color);
+    background-color: var(--primary-color);
+}

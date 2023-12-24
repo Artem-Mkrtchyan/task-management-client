@@ -1,4 +1,4 @@
-import styles from "./notFoundPage.module.scss";
+import styles from "./NotFoundPage.module.scss";
 
 export const NotFoundPage = () => {
     return (
