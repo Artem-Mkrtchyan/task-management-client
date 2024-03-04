@@ -1,28 +1,28 @@
-import { AboutPage } from "pages/aboutPage";
-import { MainPage } from "pages/mainPage";
+import { LoginPage } from "pages/Login";
+import { LogoutPage } from "pages/Logout";
 import { NotFoundPage } from "pages/notFoundPage";
 import { RouteProps } from "react-router-dom";
 
 export enum AppRoutes {
-    MAIN = "main",
-    ABOUT = "about",
+    LOGIN = "main",
+    LOGOUT = "about",
     NOT_FOUND = "not_found"
 }
 
 export const RoutesPath: Record<AppRoutes, string> = {
-    [AppRoutes.MAIN]: "/",
-    [AppRoutes.ABOUT]: "/about",
+    [AppRoutes.LOGIN]: "/login",
+    [AppRoutes.LOGOUT]: "/logout",
     [AppRoutes.NOT_FOUND]: "*"
 };
 
 export const routeConfig: Record<AppRoutes, RouteProps> = {
-    [AppRoutes.MAIN]: {
+    [AppRoutes.LOGIN]: {
         path: RoutesPath.main,
-        element: <MainPage />
+        element: <LoginPage />
     },
-    [AppRoutes.ABOUT]: {
+    [AppRoutes.LOGOUT]: {
         path: RoutesPath.about,
-        element: <AboutPage />
+        element: <LogoutPage />
     },
     [AppRoutes.NOT_FOUND]: {
         path: RoutesPath.not_found,
